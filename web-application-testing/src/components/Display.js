@@ -2,14 +2,28 @@ import React, { useState } from 'react';
 import Dashboard from './Dashboard';
 
 const Display = () => {
-    const [ballCount, setBallCount] = useState(0);
+    const [ballCount, setBallCount] = useState(2);
     const [strikeCount, setStrikeCount] = useState(0);
 
-    console.log(ballCount)
+    console.log(ballCount);
+    console.log(strikeCount);
 
     const addBall = () => {
         setBallCount(ballCount < 3 ? ballCount + 1 : 0);
-    }
+    };
+
+    const addStrike = () => {
+        setStrikeCount(strikeCount < 2 ? strikeCount + 1 : 0)
+    };
+
+    const hit = () => {
+        setBallCount(0)
+        setStrikeCount(0)
+    };
+
+    const foul = () => {
+        setStrikeCount(strikeCount < 2 ? strikeCount + 1 : strikeCount)
+    };
 
     return (
         <div>
@@ -23,17 +37,17 @@ const Display = () => {
             <div className='scores'>
                 <div className='home'>
                     <h3>Home</h3>
-                    <p className='home-score scoreboard-value'>9</p>
+                    <p className='home-score scoreboard-value'>5</p>
                 </div>
 
                 <div className='inning'>
-                    <h3>Inning</h3>
-                    <p className='inning scoreboard-value'>9</p>
+                    <h3>Inning ↓</h3>
+                    <p className='inning scoreboard-value'>7</p>
                 </div>
 
                 <div className='away'>
                     <h3>Away</h3>
-                    <p className='away-score scoreboard-value'>9</p>
+                    <p className='away-score scoreboard-value'>5</p>
                 </div>
             </div>
 
@@ -45,16 +59,16 @@ const Display = () => {
 
                 <div className='strike'>
                     <h3>Strike</h3>
-                    <p className='stike-count scoreboard-value'>9</p>
+                    <p className='stike-count scoreboard-value'>{strikeCount}</p>
                 </div>
 
                 <div className='out'>
                     <h3>Out</h3>
-                    <p className='out-count scoreboard-value'>9</p>
+                    <p className='out-count scoreboard-value'>1</p>
                 </div>
             </div>
 
-            <Dashboard props={addBall} />
+            <Dashboard ball={addBall} strike={addStrike} foul={foul} hit={hit} />
         </div>
     )
 }
