@@ -67,7 +67,47 @@
 .scoreboard-button {
   width: 60px;
   height: 40px;
+  /* border: 2px solid black; */
   border-radius: 5px;
   padding: 5px;
   font-size: 1em;
+}
+
+.scoreboard-button.ball {
+  border: 2px solid #007BFF;
+  color: #007BFF;
+}
+
+.scoreboard-button.ball:hover {
+  background-color: #007BFF;
+  color: #FFFFFF;
+}
+
+.scoreboard-button.strike {
+  border: 2px solid #DC3545;
+  color: #DC3545;
+}
+.scoreboard-button.strike:hover {
+  background-color: #DC3545;
+  color: #FFFFFF;
+}
+
+.scoreboard-button.foul {
+  border: 2px solid #FFC107;
+  color: #FFC107;
+}
+
+.scoreboard-button.foul:hover {
+  background-color: #FFC107;
+  color: #FFFFFF;
+}
+
+.scoreboard-button.hit {
+  border: 2px solid #28A745;
+  color: #28A745;
+}
+
+.scoreboard-button.hit:hover {
+  background-color: #28A745;
+  color: #FFFFFF;
 }
