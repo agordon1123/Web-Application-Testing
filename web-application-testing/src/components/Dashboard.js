@@ -4,7 +4,7 @@ const Dashboard = (props) => {
     console.log('Dashboard props: ', props)
     return (
         <div>
-            <h1>Dashboard</h1>
+            <h1>Score Tracker</h1>
 
             <div className='buttons'>
                 <button onClick={props.addBall} className='ball scoreboard-button'>Ball</button>

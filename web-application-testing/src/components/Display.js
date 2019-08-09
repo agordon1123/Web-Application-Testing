@@ -5,7 +5,11 @@ const Display = (props) => {
 
     return (
         <div>
-            <h1>Display</h1>
+            <div className='team-names'>
+                <h1 className='home-name'>Home</h1>
+                <h1 className='away-name'>Away</h1>
+            </div>
+
             <div className='teams'>
                 <img src="https://img.icons8.com/dotty/80/000000/dragon.png" />
                     <p>at</p>
