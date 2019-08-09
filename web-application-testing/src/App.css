@@ -1,0 +1,113 @@
+.App {
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #FFFFFF;
+  height: 92vh;
+  padding: 20px;
+}
+
+.team-names {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.home-name {
+  margin-right: 60px;
+}
+
+.away-name {
+  margin-left: 60px;
+}
+
+.teams {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 30px;
+}
+
+.scores {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.scoreboard-value {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: white;
+  font-size: 84px;
+  margin: 0;
+}
+
+.buttons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.scoreboard-button {
+  width: 60px;
+  height: 40px;
+  /* border: 2px solid black; */
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1em;
+}
+
+.scoreboard-button.ball {
+  border: 2px solid #007BFF;
+  color: #007BFF;
+}
+
+.scoreboard-button.ball:hover {
+  background-color: #007BFF;
+  color: #FFFFFF;
+}
+
+.scoreboard-button.strike {
+  border: 2px solid #DC3545;
+  color: #DC3545;
+}
+.scoreboard-button.strike:hover {
+  background-color: #DC3545;
+  color: #FFFFFF;
+}
+
+.scoreboard-button.foul {
+  border: 2px solid #FFC107;
+  color: #FFC107;
+}
+
+.scoreboard-button.foul:hover {
+  background-color: #FFC107;
+  color: #FFFFFF;
+}
+
+.scoreboard-button.hit {
+  border: 2px solid #28A745;
+  color: #28A745;
+}
+
+.scoreboard-button.hit:hover {
+  background-color: #28A745;
+  color: #FFFFFF;
+}
