@@ -1,29 +1,7 @@
-import React, { useState } from 'react';
-import Dashboard from './Dashboard';
+import React from 'react';
 
-const Display = () => {
-    const [ballCount, setBallCount] = useState(2);
-    const [strikeCount, setStrikeCount] = useState(0);
-
-    console.log(ballCount);
-    console.log(strikeCount);
-
-    const addBall = () => {
-        setBallCount(ballCount < 3 ? ballCount + 1 : 0);
-    };
-
-    const addStrike = () => {
-        setStrikeCount(strikeCount < 2 ? strikeCount + 1 : 0)
-    };
-
-    const hit = () => {
-        setBallCount(0)
-        setStrikeCount(0)
-    };
-
-    const foul = () => {
-        setStrikeCount(strikeCount < 2 ? strikeCount + 1 : strikeCount)
-    };
+const Display = (props) => {
+    console.log('Display props: ', props)
 
     return (
         <div>
@@ -54,12 +32,12 @@ const Display = () => {
             <div className='status'>
                 <div className='ball'>
                     <h3>Ball</h3>
-                    <p className='ball-count scoreboard-value'>{ballCount}</p>
+                    <p className='ball-count scoreboard-value'>{props.ballCount}</p>
                 </div>
 
                 <div className='strike'>
                     <h3>Strike</h3>
-                    <p className='stike-count scoreboard-value'>{strikeCount}</p>
+                    <p className='stike-count scoreboard-value'>{props.strikeCount}</p>
                 </div>
 
                 <div className='out'>
@@ -67,8 +45,6 @@ const Display = () => {
                     <p className='out-count scoreboard-value'>1</p>
                 </div>
             </div>
-
-            <Dashboard ball={addBall} strike={addStrike} foul={foul} hit={hit} />
         </div>
     )
 }
